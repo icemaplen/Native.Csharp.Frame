@@ -36,6 +36,8 @@ namespace Native.Csharp.App.Event
             container.RegisterType<ICqAppEnable, Event_CqAppEnable> ("应用已被启用");
             // 注入 Type=1004 的回调
             container.RegisterType<ICqAppDisable, Event_CqAppDisable> ("应用将被停用");
+            // 注入 Type=2 的回调
+            container.RegisterType<IReceiveGroupMessage, Event_ReceiveGroupMsg> ("当收到群消息");
         }
 
 		/// <summary>
